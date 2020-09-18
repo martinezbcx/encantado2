@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Page</title>
+
+    
+    <script>
+        function myPrompt() {
+            var person = prompt("NICE TO MEET YOU. Please enter your name"); // the second string optional-la segunda cuerda opcional
+            if (person != "") {//! means "not equal to"-! significa "no es igual a"
+                document.getElementById("test").innerHTML =
+                "Hello " + person + "! How are you today, What is your progress in the Introduction to WEB development course ?";
+            }
+            else
+            {
+                alert("Hey you didn't enter your name!");
+            }
+        }
+    </script>
+
+
+
+    <script type="text/javascript">// y otra funcion
+        function diplayInput() //Function will display a blue version of input.La función mostrará una versión azul de la entrada.
+        {
+            
+            //declaracion de variables
+            var testInput = document.getElementById("name").value;
+            if(testInput.length == 0) // operador de iguialdad
+            {// IT IS GOOD TO USE WHITE SPACE LIKE INDENTS.ES BUENO UTILIZAR EL ESPACIO BLANCO COMO INDENTES.
+                document.getElementById("para").innerHTML = "Hey, you didnt type anything!"
+            }
+            else
+            document.getElementById("para").innerHTML = testInput;
+        }
+        
+        </script>
+        
+</head>
+
+
+
+<body>
+    <p> JavaScript Prompt Box(cuadro de aviso de JavaScript)</p>
+    <button onclick="myPrompt()">Click me</button>
+    <p id="test"></p>
+    
+
+
+    <h1 style="color:rgb(236, 12, 12)">Let's see another button. Write your hobby</h1>
+    <input id="name" type="text"/>
+
+
+    <button onclick="diplayInput();">Color It</button>
+    <p id="para" style="color:rgb(20, 211, 116)"></p>
+    
+    
+</body>
+
+
+<footer>
+   
+    <img src= "http://www.intro-webdesign.com/images/newlogo.png" alt = "Intro to Web Design logo">
+    <p>This page was created by <strong>BELKIS COROMOTO MARTINEZ</strong> for the course; <strong> INTRODUCTION TO WEB DEVELOPMENT</strong>. To learn more about web design, visit <a href = "http://www.intro-webdesign.com/javascript.html" >Intro to Web Design</a> </p>
+</footer>
+
+</html>
